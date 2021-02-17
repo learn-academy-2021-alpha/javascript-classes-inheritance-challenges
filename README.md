@@ -1,5 +1,5 @@
 # Javascript Challenges
-**Unit 1 JavaScript Challenges**
+**Unit 1 JavaScript Challenges**  
 Challenges for classes and inheritance challenges for Alpha 2021
 
 ### Naming Conventions
