@@ -3,6 +3,7 @@
 Challenges for classes and inheritance challenges for Alpha 2021
 
 ### Naming Conventions
+- NO CAPITAL LETTERS!
 - Branch name: `topic-initial1-initial2` (ex. arrays-m-s)
 - File name: `topic-student1-student2.js` (ex. arrays-mina-sarah.js)
 
@@ -15,7 +16,7 @@ Challenges for classes and inheritance challenges for Alpha 2021
 
 #### 1) First Driver
 - $ git checkout -b < topic-initial1-initial2 > (ex. arrays-m-s)
-- create a new file inside the repo folder < topic-student1-student2.js > (ex. arrays-mina-sarah.js)
+- Create a new file inside the repo folder < topic-student1-student2.js > (ex. arrays-mina-sarah.js)
 - Code!
 - $ git status (this is an informational command that will help you avoid mistakes)
 - $ git add .
@@ -43,7 +44,7 @@ Challenges for classes and inheritance challenges for Alpha 2021
 
 
 #### 4) Next Swap
-- repeat the `Next Swap` step
+- Repeat the `Next Swap` step
 
 
 ### First Time With This Repo
@@ -82,11 +83,5 @@ Challenges for classes and inheritance challenges for Alpha 2021
 
 
 #### 4) Next Swap
-(This is the same as the previous step)
-- $ git pull origin < your-branch-name >
-- Code!
-- $ git status (this is an informational command that will help you avoid mistakes)
-- $ git add .
-- $ git commit -m "useful information here"
-- $ git push origin < your-branch-name >
+- Repeat the `Next Swap` step
 
