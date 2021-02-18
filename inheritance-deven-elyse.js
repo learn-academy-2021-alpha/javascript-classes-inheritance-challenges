@@ -133,7 +133,7 @@
 //     super(model, year);
 //   }
 // }
-// // let myTesla = new Tesla("X", 2021)
+// let myTesla = new Tesla("X", 2021)
 // var myToyota = new Toyota("Tacoma", 2021)
 // console.log(myToyota)
 
@@ -159,6 +159,8 @@ class Car{
       this.year = year
       this.lights = "off"
       this.signal = "off"
+      this.speed = 0
+      // this.acceleration = 0
     }
     wheels (){
       this.wheels = 4;
@@ -175,11 +177,20 @@ class Car{
     signalOff(){
       this.signal = "off"
     }
+    acceleration(fast){
+      this.speed = 1 * fast
+    }
+    braking(slow){
+      this.speed = 
+    }
   }
 
 class Tesla extends Car{
     constructor (model,year) {
         super(model,year);
+    }
+    teslaAccel(fast){
+      this.speed = 10 * fast
     }
 }
 class Toyota extends Car{
@@ -193,22 +204,33 @@ class Volkswagen extends Car{
   }
 }
 var myVolkswagen = new Volkswagen("Jetta", 2021)
+var myTesla = new Tesla("X", 2021)
+var myToyota = new Toyota("Tacoma", 2021)
 // console.log(myVolkswagen)
 // myVolkswagen.lightsOn()
 // console.log(myVolkswagen)
 
 // myVolkswagen.lightsOff()
 // console.log(myVolkswagen)
-myVolkswagen.signalOn()
-console.log(myVolkswagen)
-myVolkswagen.signalOff()
-console.log(myVolkswagen)
+// myVolkswagen.signalOn()
+// console.log(myVolkswagen)
+// myVolkswagen.signalOff()
+// console.log(myVolkswagen)
+myTesla.teslaAccel(10)
+console.log(myTesla)
+myTesla.braking(7)
+console.log(myTesla)
+
+
 // Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 //
 // Story: As a programmer, I can turn the lights in all my cars on and off.
 //
 // Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
 //
+
+
+
 // Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
 //
 // Story: As a programmer, I can speed my Tesla up by 10 per acceleration.
