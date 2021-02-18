@@ -43,31 +43,50 @@
 //
 // Latte Maker
 // Write a Latte class that receives a flavor, a milk type and a number of shots.
-class Latte {
-  constructor(flavor, milkType, shots) {
-    //     key  :  value
-    this.flavor = flavor;
-    this.milkType = milkType;
-    this.shots = shots;
-  }
-
-  latteProfile(){
-    return (`${this.flavor}: ${this.milkType}, ${this.shots}`)
-  }
-}
+// class Latte {
+//   constructor(flavor, milkType, shots) {
+//     //     key  :  value
+//     this.flavor = flavor;
+//     this.milkType = milkType;
+//     this.shots = shots;
+//   }
+//
+//   latteProfile(){
+//     return (`${this.flavor}: ${this.milkType}, ${this.shots}`)
+//   }
+// }
 
 //
 // Write a method for your Latte class that outputs the latte's profile.
 //
 // Write the code that makes a regular, single shot latte. Then, log the latte's profile.
-let regLatte = new Latte('regular', 'cow', 1)
-console.log(regLatte.latteProfile())
+// let regLatte = new Latte('regular', 'cow', 1)
+// console.log(regLatte.latteProfile())
 //
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
-let hazelnutLatte = new Latte('hazelnut', 'almond', 2)
-console.log(hazelnutLatte.latteProfile())
+// let hazelnutLatte = new Latte('hazelnut', 'almond', 2)
+// console.log(hazelnutLatte.latteProfile())
 //
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
-//
+
+class CylinderVow {
+  //take in radius and height -- 2 arguements
+  constructor(radius, height){
+    this.radius = radius * radius
+    this.height = height
+  }
+  //method needs to multiply pie radius and height
+  //output needs to have four decimal places
+  volume() {
+    return (this.radius * this.height * Math.PI).toFixed(4)
+  }
+}
 // Write the code that creates three unique cylinder objects
+
+let cylinderOne = new CylinderVow(5,10)
+let cylinderTwo = new CylinderVow(123, 27)
+let cylinderThree = new CylinderVow(20, 21)
+console.log(cylinderOne.volume());
+console.log(cylinderTwo.volume());
+console.log(cylinderThree.volume());
