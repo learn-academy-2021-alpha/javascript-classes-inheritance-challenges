@@ -36,25 +36,56 @@ class Car {
 	constructor(model, year) {
 		this.model = model;
 		this.year = year;
+		this.wheels = 4;
 	}
 	wheels(number) {
-		this.wheels = wheels;
+		this.wheels = 4;
 	}
 }
-let myCar = new Car("generic car", "myCar year", 4);
+let myCar = new Car("generic car", "myCar year");
 
-console.log(myCar);
+console.log(myCar.wheels);
 
 // Story: As a programmer, I can make a Tesla car.
 // class Tesla inherits from class Car
+
+class Tesla extends Car{
+	constructor(model,year){
+		super(model,year);
+	}
+}
+
 // Create an object called myTesla which is a instance of class Tesla
+
+//let myTesla = new Tesla
+//console.log(myTesla);
+
 // Story: As a programmer, I can give my Tesla a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
+
+// let myTesla = new Tesla("Model S")
+// console.log(myTesla);
+
 // Story: As a programmer, I can give my Tesla a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
+
+let myTesla = new Tesla("Model S","2020")
+console.log(myTesla);
+
 // Story: As a programmer, I can make a Toyota car.
 // class Toyota inherits from class Car
+
+class Toyota extends Car{
+	constructor(model,year){
+		super(model,year);
+	}
+}
+
 // create an object called myToyota which is a instance of class Toyota
+
+let myToyota = new Toyota()
+console.log(myToyota);
+
 // Story: As a programmer, I can give my Toyota a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Toyota a year on initialization.
