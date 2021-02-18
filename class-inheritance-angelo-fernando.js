@@ -16,47 +16,6 @@
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 // Story: As a programmer, I can give my Tesla a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
-
-class Car {
-    constructor(model, year, tires){
-        this.model = "Generic Car"
-        this.year = "myCar year"
-        this.tires = 0
-    }
-
-wheels(){
-    this.tires = 4
-    } 
-}
-
-class Tesla extends Car {
-    constructor(model, year){
-        super(model, year);
-        this.isNewCar = false
-    }
-}
-
-class myTesla extends Tesla {
-    constructor(){
-    super();
-    this.model ="model" ,
-    this.year = "year" ,
-    this.tires=  0
-    }
-  }
-
-
-let myTesla1 = new Tesla
-let myCar = new Car
-
-console.log(myCar)
-myCar.wheels();
-console.log(myTesla1)
-
-
-
-
-
 // Story: As a programmer, I can make a Toyota car.
 // class Toyota inherits from class Car
 // create an object called myToyota which is a instance of class Toyota
@@ -72,8 +31,74 @@ console.log(myTesla1)
 // Story: As a programmer, I can give my Volkswagen a year on initialization.
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 // Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
-
 // Story: As a programmer, I can turn the lights in all my cars on and off.
+class Car {
+    constructor(model, year){
+        this.model = "Generic Car"
+        this.year = "myCar year"
+        this.tires = 0
+        this.lights = "off"
+        this.signal = "off"
+    }
+
+wheels(){
+    this.tires = 4
+  }
+toggleLights(){
+  if(this.lights === "off"){
+    return (this.lights = "on")
+  }
+ }
+ toggleSignal(){
+   if(this.signal === "off"){
+     return (this.signal = "on")
+   }
+}
+}
+class Tesla extends Car {
+    constructor(model, year){
+        super(model, year);
+
+    }
+}
+
+class Toyota extends Car {
+  constructor(model, year){
+  super(model, year);
+  }
+}
+
+class Vwcar extends Car {
+  constructor(model, year){
+    super(model, year);
+  }
+}
+
+
+let myVw = new Vwcar()
+let myToyota = new Toyota()
+let myTesla1 = new Tesla()
+let myCar = new Car()
+
+console.log(myCar);
+// myCar.wheels().lights(myCar);
+// console.log(myVw);
+myCar.toggleSignal();
+// console.log(myCar.lights());
+console.log(myCar);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
 
