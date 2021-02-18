@@ -12,7 +12,7 @@ class Car {
     this.brakingOfCar = braking
   }
 
-  wheels() {
+  wheel() {
     return this.wheels
   }
 
@@ -47,12 +47,16 @@ class Car {
   braking(){
     this.speed = this.speed - this.brakingOfCar
   }
+
+  carInfo() {
+    console.log(`The ${this.year} ${this.model} has ${this.wheels} wheels, the ${this.logLightsStatus()} and the ${this.logSignalsStatus()} and the speed is ${this.speed} MPH.`)
+  }
 }
 
 // Write a variable called myCar which is an instance of the class Car
 let myCar = new Car()
 console.log(myCar)
-console.log(myCar.wheels)
+console.log(myCar.wheel())
 
 // Story: As a programmer, I can give my car a model on initialization. (done)
 // The model for the car class can be "generic car" (done)
@@ -79,6 +83,7 @@ myTesla.light()
 myTesla.acceleration()
 myTesla.acceleration()
 console.log(myTesla)
+myTesla.carInfo()
 
 // Create an object called myTesla which is a instance of class Tesla (done)
 // Story: As a programmer, I can give my Tesla a model on initialization. (done)
@@ -106,6 +111,7 @@ console.log(myToyota)
 myToyota.signal()
 myToyota.acceleration()
 console.log(myToyota)
+myToyota.carInfo()
 
 // Story: As a programmer, I can give my Toyota a model on initialization.(done)
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class (done)
@@ -132,6 +138,7 @@ myVolkswagen.acceleration()
 myVolkswagen.acceleration()
 myVolkswagen.braking()
 console.log(myVolkswagen)
+myVolkswagen.carInfo()
 
 // create an object called myVolkswagen which is a instance of class Volkswagen (done)
 // Story: As a programmer, I can give my Volkswagen a model on initialization. (done)
@@ -146,17 +153,17 @@ console.log(myVolkswagen)
 
 // Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph. (done)
 
-// Story: As a programmer, I can speed my Tesla up by 10 per acceleration.
+// Story: As a programmer, I can speed my Tesla up by 10 per acceleration.(done)
 
-// Story: As a programmer, I can slow my Tesla down by 7 per braking.
+// Story: As a programmer, I can slow my Tesla down by 7 per braking.(done)
 
-// Story: As a programmer, I can speed my Toyota up by 5 per acceleration.
+// Story: As a programmer, I can speed my Toyota up by 5 per acceleration.(done)
 
-// Story: As a programmer, I can slow my Toyota down by 2 per braking.
+// Story: As a programmer, I can slow my Toyota down by 2 per braking.(done)
 
-// Story: As a programmer, I can speed my Volkswagen up by 7 per acceleration.
+// Story: As a programmer, I can speed my Volkswagen up by 7 per acceleration.(done)
 
-// Story: As a programmer, I can slow my Volkswagen down by 5 per braking.
+// Story: As a programmer, I can slow my Volkswagen down by 5 per braking.(done)
 
 // Story: As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
 
