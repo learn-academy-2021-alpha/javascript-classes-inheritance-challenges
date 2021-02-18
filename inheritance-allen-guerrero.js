@@ -30,6 +30,10 @@ class Car {
     currentSpeed() {
         return `The current speed is ${this.speed} mph for the ${this.year} ${this.model}`
     }
+    // I can call upon a carInfo method that will tell me all the information about a car.
+    carInfo() {
+        return `The current speed is ${this.speed} mph for the ${this.year} ${this.model}, whose lights are ${this.lights}`
+    }
 }
 
 // make a Tesla car.
@@ -90,11 +94,13 @@ var myTesla = new Tesla('Tesla', 2021)
 var allensToyota = new Toyota('Prius', 2015)
 var guerrerosVolkswagen = new Volkswagen('jetta', 2012)
 
-console.log(myTesla.currentSpeed()); // Expect 0
-myTesla.speedUp();
-console.log(myTesla.currentSpeed()); // Expect 10
-myTesla.slowDown();
-console.log(myTesla.currentSpeed()); // Expect 3
-console.log(allensToyota.currentSpeed())
-allensToyota.speedUp();
-console.log(allensToyota.currentSpeed())
+// Current car info for the Volkswagen
+console.log(guerrerosVolkswagen.carInfo())
+// Turn on the lights
+guerrerosVolkswagen.headLights()
+// Speed up
+guerrerosVolkswagen.speedUp()
+// Slow down
+guerrerosVolkswagen.slowDown()
+// Print out the new car info for the Volkswagen
+console.log(guerrerosVolkswagen.carInfo())
