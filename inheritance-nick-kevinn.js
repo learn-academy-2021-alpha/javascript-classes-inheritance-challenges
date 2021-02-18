@@ -1,6 +1,6 @@
 // Story: As a programmer, I can make a car.
 class Car {
-  constructor(model, year, acceleration, braking) {
+  constructor(model, year) {
     this.isCar = true
     this.model = model
     this.year = year
@@ -8,8 +8,6 @@ class Car {
     this.lights = false
     this.signals = false
     this.speed = 0
-    this.accelerationOfCar = acceleration
-    this.brakingOfCar = braking
   }
 
   wheel() {
@@ -40,14 +38,6 @@ class Car {
     }
   }
 
-  acceleration() {
-    this.speed = this.speed + this.accelerationOfCar
-  }
-
-  braking(){
-    this.speed = this.speed - this.brakingOfCar
-  }
-
   carInfo() {
     console.log(`The ${this.year} ${this.model} has ${this.wheels} wheels, the ${this.logLightsStatus()} and the ${this.logSignalsStatus()} and the speed is ${this.speed} MPH.`)
   }
@@ -68,8 +58,16 @@ console.log(myCar.wheel())
 // class Tesla inherits from class Car (done)
 
 class Tesla extends Car {
-  constructor(model, year, acceleration, braking) {
-    super(model, year, acceleration, braking)
+  constructor(model, year) {
+    super(model, year)
+  }
+
+  acceleration() {
+    this.speed = this.speed + 10
+  }
+
+  braking(){
+    this.speed = this.speed - 7
   }
 
   // acceleration() {
@@ -77,7 +75,7 @@ class Tesla extends Car {
   // }
 }
 
-let myTesla = new Tesla('model s', 2020, 10, 7)
+let myTesla = new Tesla('model s', 2020)
 console.log(myTesla)
 myTesla.light()
 myTesla.acceleration()
@@ -96,8 +94,16 @@ myTesla.carInfo()
 // class Toyota inherits from class Car
 
 class Toyota extends Car {
-  constructor(model, year, acceleration, braking) {
-    super(model, year, acceleration, braking);
+  constructor(model, year) {
+    super(model, year);
+  }
+
+  acceleration() {
+    this.speed = this.speed + 5
+  }
+
+  braking(){
+    this.speed = this.speed - 2
   }
 
   // acceleration() {
@@ -106,7 +112,7 @@ class Toyota extends Car {
 }
 // create an object called myToyota which is a instance of class Toyota
 
-let myToyota = new Toyota('tacoma', 2021, 5, 2)
+let myToyota = new Toyota('tacoma', 2021)
 console.log(myToyota)
 myToyota.signal()
 myToyota.acceleration()
@@ -121,8 +127,20 @@ myToyota.carInfo()
 // class Volkswagen inherits from class Car (done)
 
 class Volkswagen extends Car {
-  constructor(model, year, acceleration, braking) {
-    super(model, year, acceleration, braking);
+  constructor(model, year) {
+    super(model, year);
+  }
+
+  acceleration() {
+    this.speed = this.speed + 7
+  }
+
+  braking(){
+    if(this.speed > 5){
+      this.speed = this.speed - 5
+    } else if(this.speed < 5) {
+      this.speed--
+    } 
   }
 
   // acceleration() {
@@ -130,12 +148,19 @@ class Volkswagen extends Car {
   // }
 }
 
-let myVolkswagen = new Volkswagen("jetta", 2017, 7, 5)
+let myVolkswagen = new Volkswagen("jetta", 2017)
 console.log(myVolkswagen)
 myVolkswagen.acceleration()
 myVolkswagen.acceleration()
 myVolkswagen.acceleration()
 myVolkswagen.acceleration()
+myVolkswagen.braking()
+myVolkswagen.braking()
+myVolkswagen.braking()
+myVolkswagen.braking()
+myVolkswagen.braking()
+myVolkswagen.braking()
+myVolkswagen.braking()
 myVolkswagen.braking()
 console.log(myVolkswagen)
 myVolkswagen.carInfo()
