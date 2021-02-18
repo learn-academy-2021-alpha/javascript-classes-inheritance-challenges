@@ -47,13 +47,28 @@ console.log(twoSugars.coffeeProfile())
 // 2. Latte Maker
 // Write a Latte class that receives a flavor, a milk type and a number of shots.
 
+class Latte {
+  constructor(flavor, milkType, shots){
+    this.flavor = flavor
+    this.milkType = milkType
+    this.shots = shots
+  }
+  latteProfile(){
+    return `This ${this.flavor} latte has ${this.milkType} milk and ${this.shots} shot(s).`
+  }
+}
+
 // Write a method for your Latte class that outputs the latte's profile.
 
 // Write the code that makes a regular, single shot latte. Then, log the latte's profile.
 
+let regularLatte = new Latte("regular","oat",1);
+console.log(regularLatte.latteProfile());
+
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
 
-
+let hazulnutLatte = new Latte("hazulnut","almond",2)
+console.log(hazulnutLatte.latteProfile());
 
 // 3. Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
