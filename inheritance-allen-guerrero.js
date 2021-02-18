@@ -58,13 +58,28 @@ class Toyota extends Car {
     constructor(model, year) {
         super(model, year);
     }
+    // speed my Toyota up by 5 per acceleration.
+    speedUp() {
+        this.speed = this.speed + 5
+    }
+    // slow my Toyota down by 2 per braking.
+    slowDown() {
+        this.speed = this.speed - 2
+    }
 }
+
 // make a Volkswagen car.
 // class Volkswagen inherits from class Car
 // create an object called myVolkswagen which is a instance of class Volkswagen
 class Volkswagen extends Car {
     constructor(model, year) {
         super(model, year);
+    }
+    speedUp() {
+        this.speed = this.speed + 7
+    }
+    slowDown() {
+        this.speed = this.speed - 5
     }
 }
 
@@ -80,3 +95,6 @@ myTesla.speedUp();
 console.log(myTesla.currentSpeed()); // Expect 10
 myTesla.slowDown();
 console.log(myTesla.currentSpeed()); // Expect 3
+console.log(allensToyota.currentSpeed())
+allensToyota.speedUp();
+console.log(allensToyota.currentSpeed())
