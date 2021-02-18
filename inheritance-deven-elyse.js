@@ -157,9 +157,23 @@ class Car{
     constructor(model, year){
       this.model = model
       this.year = year
+      this.lights = "off"
+      this.signal = "off"
     }
     wheels (){
-        this.wheels = 4
+      this.wheels = 4;
+    }
+    lightsOn(){
+      this.lights = "on";
+    }
+    lightsOff(){
+      this.lights = "off";
+  }
+    signalOn(){
+      this.signal = "on"
+    }
+    signalOff(){
+      this.signal = "off"
     }
   }
 
@@ -179,8 +193,16 @@ class Volkswagen extends Car{
   }
 }
 var myVolkswagen = new Volkswagen("Jetta", 2021)
-console.log(myVolkswagen)
+// console.log(myVolkswagen)
+// myVolkswagen.lightsOn()
+// console.log(myVolkswagen)
 
+// myVolkswagen.lightsOff()
+// console.log(myVolkswagen)
+myVolkswagen.signalOn()
+console.log(myVolkswagen)
+myVolkswagen.signalOff()
+console.log(myVolkswagen)
 // Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 //
 // Story: As a programmer, I can turn the lights in all my cars on and off.
