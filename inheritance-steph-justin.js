@@ -68,33 +68,60 @@
 
 
 class Car {
-    constructor () {
-        this.model = "generic car"
-        this.year = "myCar year"
+    constructor (model, year) {
+        this.model = model
+        this.year = year
+        this.lights = "off"
+        this.signal = "off"
+        this.speed = 0
     }
     wheels () {
         this.numberWheels = 4
+    }
+    lightSwitch () {
+        this.lights = "on"
+    }
+    laneSignal () {
+        this.signal = "on"
+    }
+    speedIncr () {
+        let acc = true
+        if(acc){
+            this.speed = speed
+        }
     }
 }
 
 class Tesla extends Car {
     constructor (model, year) {
-        super();
+        super(model, year);
     }
+    
 }
 
 class Toyota extends Car {
-    constructor () {
-        super ();
+    constructor (model, year) {
+        super (model, year);
     }
 }
 
-// let myToyota = new Toyota()
+class Volkswagen extends Car {
+    constructor (model, year) {
+        super(model, year);
+    }
+}
 
-// let myCar = new Car()
+// let myToyota = new Toyota("tacoma", 1999)
 
-let myTesla = new Tesla ()
-console.log(myTesla)
+// // let myCar = new Car()
+
+// let myTesla = new Tesla ("three", 2018)
+// console.log(myTesla)
+let myVolkswagen = new Volkswagen("golf", 2005)
+// console.log(myVolkswagen)
+// console.log(myToyota)
+console.log(myVolkswagen.lightSwitch())
+// console.log(myVolkswagen.speedIncr())
 
 
 // Story: As a programmer, I can make a Volkswagen car.
