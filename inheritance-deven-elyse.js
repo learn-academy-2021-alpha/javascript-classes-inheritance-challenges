@@ -31,19 +31,46 @@
 
 // class Car{
 //   constructor(model, year){
-//     this.hasWheels = true;
-//     this.hasEngine = true;
 //     this.model = model
 //     this.year = year
 //   }
+//   wheels (){
+//       this.wheels = 4
+//   }
 // }
 // let myCar = new Car("Rav4", 2021)
-// console.log(myCar);
+// myCar.wheels()
+// console.log(myCar)
+
 
 // Story: As a programmer, I can tell how many wheels myCar has.
 // Calling the method wheels will return 4
+
+class Car{
+    constructor(model, year){
+      this.model = model
+      this.year = year
+    }
+    wheels (){
+        this.wheels = 4
+    }
+  }
+  let myCar = new Car("Rav4", 2021)
+  myCar.wheels()
+  console.log(myCar)
+
 // Story: As a programmer, I can make a Tesla car.
 // class Tesla inherits from class Car
+
+class Tesla extends Car{
+    constructor (model,year) {
+        super(model,year);
+        //this.tesla = tesla
+    }
+}
+
+let myTesla = new Tesla("X", 2021)
+console.log(myTesla)
 // Create an object called myTesla which is a instance of class Tesla
 // Story: As a programmer, I can give my Tesla a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
