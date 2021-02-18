@@ -11,6 +11,8 @@ class Car {
         this.year = year;
         // give all my cars a lights property. Lights start in the off position.
         this.lights = 'off';
+        // I can determine the speed of a car. Speed starts at 0 mph.
+        this.speed = 0;
     }
     headLights () {
         if (this.lights === 'off') {
@@ -24,7 +26,10 @@ class Car {
         this.myWheels = 4
         return this.myWheels
     }
-
+    // Create method to return current speed
+    currentSpeed() {
+        return `The current speed is ${this.speed} mph for the ${this.year} ${this.model}`
+    }
 }
 
 // make a Tesla car.
@@ -34,6 +39,17 @@ class Tesla extends Car {
     // The model and year can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
     constructor(model, year) {
         super(model, year); 
+    }
+
+    // I can speed my Tesla up by 10 per acceleration.
+    speedUp() {
+        this.speed = this.speed + 10
+        // this.speed += 10
+    }
+
+    // I can slow my Tesla down by 7 per braking.
+    slowDown() {
+        this.speed = this.speed - 7
     }
 }
 
@@ -58,9 +74,9 @@ var myCar = new Car();
 var myTesla = new Tesla('Tesla', 2021)
 var allensToyota = new Toyota('Prius', 2015)
 var guerrerosVolkswagen = new Volkswagen('jetta', 2012)
-console.log(myCar.wheels());
-console.log(myTesla)
-allensToyota.headLights()
-allensToyota.headLights()
-console.log(allensToyota)
-console.log(guerrerosVolkswagen)
+
+console.log(myTesla.currentSpeed()); // Expect 0
+myTesla.speedUp();
+console.log(myTesla.currentSpeed()); // Expect 10
+myTesla.slowDown();
+console.log(myTesla.currentSpeed()); // Expect 3
